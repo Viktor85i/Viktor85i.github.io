@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 week</title>
+	<link href="images/favicon.png" rel="shortcut icon" type="image/png">
+	<style>
+		body {
+			background: #d7f8f4;
+		}
+		.flex {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			margin-top: 10%;
+		}
+		.flex div {
+			width: 25%;
+			height: 25%;
+			margin: 1%;
+			padding: 1%;
+			border: 3px solid #6381eb; 
+		}
+	</style>
+</head>
+<body>
+	<div class="flex">
+		<div class="first">
+			<script>
+				//Задание №1
+				document.write("Задание №1 " + "Вывод на экран с помощью 'Alert'" + "<br>");
+				var browser = 'IE';
+				if (browser === 'IE') {
+					alert('Задание №1'+' - ' + 'О, да у вас IE!' );	
+				} else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+					alert('Задание №1'+' - ' + 'Да, и эти браузеры мы поддерживаем');
+				} else	{
+					alert('Задание №1'+' - ' + 'Мы надеемся, что и в вашем браузере все ок!');
+				}
+			</script>
+		</div>
+		<div class="second">
+			<script>
+				//Задание 2
+				document.write("Задание №2 " + "Вывод на экран с помощью 'Alert'" + "<br>");
+				var a = +prompt('Задание №2: (Введите от 0 до 3) a?', '');
+				switch (a) {
+					case 0: alert('Задание №2 (Ответ): ' + 0);
+						break; 
+					case 1: alert('Задание №2 (Ответ): ' + 1);
+						break;
+					case 2:
+					case 3: alert('Задание №2 (Ответ): ' + '2,3');
+						break;
+				}
+			</script>
+		</div>
+		<div class="third">
+			<script>
+				//Задание 3
+				document.write("Задание №3" + "<br>");
+				var nDate = new Date();
+				var min = nDate.getMinutes();
+				var sec = nDate.getSeconds();
+				if (min < 10) {
+					min = "0" + min; 
+				}
+				if (sec < 10) {
+					sec = "0" + sec; 
+				}
+				document.write(nDate.getHours() + ":" + min + ":" + sec +"<br>");
+			</script>
+		</div>
+		<div class="fourth">
+			<script>
+				//Задание 4
+				document.write("Задание №4" + "<br>");
+				var writeDay = +prompt("Задание №4: Введите число от 1 до 1000!", "");
+				var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+				var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+				var nowDay = new Date();
+				var dayToNow = nowDay.getTime(); 
+				function getDate(num) {
+					var dayTo = new Date(1000*60*60*24*num); 
+					var nextDay = dayTo.getTime()  
+					var nowDayPlusDayTo = new Date(dayToNow + nextDay);
+					document.write("Через " + num + " дней будет вот такая дата: " + "<br>");
+					document.write("День недели: " + days[nowDayPlusDayTo.getDay()] + "<br>");
+					document.write("Число: " + nowDayPlusDayTo.getDate() + "<br>");
+					document.write("Месяц: " + months[nowDayPlusDayTo.getMonth()] + "<br>");
+					document.write("Год: " + nowDayPlusDayTo.getFullYear() + "<br>");
+				}
+				if (writeDay < 1 || writeDay > 1000 || isNaN(writeDay)) { 
+					document.write("Вы ввели не число, либо за пределами от 1 до 1000" + "<br>");
+				} else {
+					getDate(writeDay);
+				}
+			</script>
+		</div>
+		<div class="fifth">
+			<script>
+				//Задание 5
+				document.write("Задание №5" + "<br>");
+				var forTesting = "8 пингвинов и 9 карасей.";
+				var regStr = /^\d+/;
+				function getString(str) {
+					if (str.match(regStr)) {
+						document.write("Строка начинается с цифры " + str.match(regStr) + "<br>");
+					} else {
+						document.write("Строка не начинается с цифры" + "<br>");
+					}
+					
+				}
+				getString(forTesting);
+			</script>
+		</div>
+		<div class="sixth">
+			<script>
+				//Задание 6
+				document.write("Задание №6" + "<br>");
+				var strCard = "Иван вчера потерял свою кредитку, ее номер 1178-9087-2384-8787. Поэтому он пошел в банк и описал ситуацию. Там пошли ему навстречу и выдали новую кредитку под номером: 1103-8899-0811-1722";
+				var regCardNew = /[0-3]{4}-\d{4}-\d{4}-\d{4}/g;
+				var result = strCard.match(regCardNew);
+				document.write(result + "<br>");
+			</script>
+		</div>
+		<div class="seventh">
+			<script>
+				//Задание 7
+				document.write("Задание №7" + "<br>");
+				var tel = "8/927/31/10/765";
+				var sign = "-";
+				function changeTel(tel, delimiter) {
+					var newtel = tel.replace(/\//g,delimiter);
+					document.write(newtel + "<br>");
+				}
+				changeTel(tel,sign);
+			</script>
+		</div>
+		<div class="eighth">
+			<script>
+				//Задание 8
+				document.write("Задание №8" + "<br>");
+				var str = prompt("Задание №8: Введите любое слово!!!", "");
+				function getStringLength(string) {
+					if (string.length > 10) {
+						return "В строке больше 10 символов, а именно " + string.length + "<br>";
+					} else if (string.length == 10) {
+						return "В строке " + string.length + " символов" + "<br>";
+					} else if (string.length == "") {
+						return "В строке нет символов" + "<br>";
+					} else {
+						return "В строке меньше 10 символов, а именно " + string.length + "<br>";
+					}
+				}
+				document.write(getStringLength(str));
+			</script>
+		</div>
+		<div class="ninth">
+			<script>
+				// Задание 9
+				document.write("Задание №9" + "<br>");
+				for (var i = 1; i <= 7; i++) {
+					var num = i*i;
+					document.write("Квадрат " + i + " = " + num + "<br>");
+				}
+				var a = +prompt("Задание №9: Введите первое число", "");
+				var b = +prompt("Задание №9: Введите второе число", "");
+				// 1 Способ
+				function getSum(num1,num2) {
+					var result = num1 + num2;
+					return result;
+				}
+				alert("Задание №9(1-й способ): Cумма равна " + getSum(a,b));
+				//////////////////////////////////////////
+				// 2 Способ
+				function getSum2() {
+					var sum = 0;
+			        for (var i = 0; i < arguments.length; i++) {
+			                sum += arguments[i];		
+					} 
+					return sum;
+				}
+				alert("(2-й способ через arguments): Cумма равна " + getSum2(a,b));
+			</script>
+		</div>
+		<div class="tenth">
+			<script>
+				//Задание 10
+				document.write("Задание №10 " + "Вывод на экран с помощью 'Alert'" );
+				var i = 0;
+				while (i < 3) {
+					alert( "Задание №10: номер " + i + "!" );
+					i++;
+				}
+			</script>
+		</div>
+	</div>
+	
+</body>
+</html>
