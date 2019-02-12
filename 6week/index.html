@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6 week</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="images/favicon.png" rel="shortcut icon" type="image/png">
+</head>
+<body>
+	<div class="flex">
+		<div class="first">
+			<h2>Задание №1</h2>
+			<div>
+				<form name="first">
+					<input type="text" id="num1" placeholder="Введите первое число"><br><br>
+					<input type="text" id="num2" placeholder="Введите второе число"> <br><br>
+					<input  type="button" value="+" id="plus" >
+					<input type="button" value="-" id="min" >
+					<input type="button" value="*" id="mult" >
+					<input type="button" value="/" id="div" ><br>
+					<label for="result">Ответ:</label><br>	
+					<input type="text"  value="" id="result">
+				</form>	
+			</div>	
+		</div>
+		<div class="second">
+			<h2>Задание №2</h2>
+			<form name="two">
+				<input type="text" id="wordi" class="input">
+				<input type="button" id="button" value="upperCase">
+			</form>
+		</div>
+		<div class="third">
+			<h2>Задание №3</h2>
+			<div>
+				<form name="third">
+					<input type="text" id="num3" placeholder="Введите первое число"><br><br>
+					<input type="text" id="num4" placeholder="Введите второе число"> <br><br>
+					
+					<label for="plus3">+</label><input  type="radio" name="radio" id="plus3" >
+					<label for="min3">-</label><input type="radio" name="radio" id="min3" checked>
+					<label for="mult3">*</label><input type="radio" name="radio" id="mult3" >
+					<label for="div3">/</label><input type="radio" name="radio" id="div3" ><br>
+					<label for="result3">Ответ:</label><br>	
+					<input type="text"  id="result3">
+				</form>	
+			</div>	
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
